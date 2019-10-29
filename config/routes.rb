@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/rev_test' => 'hello#rev_test'
   get '/chars_recognize' => 'chars#chars_recognize'
   get '/type_check' => 'hello#type_check'
+  get '/weeia' => 'calendar#weeia'
 end
