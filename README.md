@@ -2,10 +2,12 @@
 
 Endpoint:
 
-*GET chars_recognize/*
+## GET chars_recognize/
+### Zwraca wystepujace w podanym parametrze duże i małe litery, liczby, znaki specjalne w dowolnej ich kombinacji.
+#### parament wymagany
+  *str*
 
-parament wymagany
-*str*
+  ---
 
 
 _Przyklad_ opowiedz z API dla zapytania GET _/chars_recognize?str=MM1!@a4_
