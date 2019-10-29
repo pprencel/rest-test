@@ -1,24 +1,18 @@
-# README
+# Dokumntacja string API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Endpoint:
+```
+/chars_recognize
+```
 
-Things you may want to cover:
+parament wymagany
+*str*
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+_Przykladowa_ opowiedz z API dla zapytania _/chars_recognize?str="mama"_
+```
+{
+  charsTypes: 'string',
+  errors: []
+}
+```
