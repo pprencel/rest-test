@@ -1,11 +1,8 @@
 # Dokumntacja string API
 
-Endpoint:
-
 ## GET chars_recognize/
 ### Zwraca wystepujace w podanym parametrze duże i małe litery, liczby, znaki specjalne w dowolnej ich kombinacji.
-#### parament wymagany
-  *str*
+#### parament wymagany - *str*
 
   ---
 
