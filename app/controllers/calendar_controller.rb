@@ -1,8 +1,10 @@
 require 'rest-client'
+require 'icalendar'
 
 class CalendarController < ApplicationController
 
   def weeia
+    cal = Icalendar::Calendar.new
     @feed = "http://www.weeia.p.lodz.pl/"
     month = params["month"]
 
@@ -16,12 +18,12 @@ class CalendarController < ApplicationController
       day = cell.css("a").text
       text = cell.css(".calendar-text").text
       year = Date.current.year
-      date = Date.strptime("#{day}-#{month}-#{year}", '%e-%m-%Y').to_s
-      resp << {text: text, date: date}
+      cal.event do |e|
+        e.dtstart     = Icalendar::Values::Date.new("#{year}#{month}#{day}")
+        e.summary     = text
+      end
     end
 
-    binding.pry
-    render json: resp
-
+    render plain: cal.to_ical
   end
 end

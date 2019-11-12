@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'nokogiri', '~> 1.10', '>= 1.10.4'
 gem 'rest-client', '~> 2.1'
 gem 'pry'
+gem 'icalendar'
