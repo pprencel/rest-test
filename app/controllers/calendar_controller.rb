@@ -23,7 +23,8 @@ class CalendarController < ApplicationController
         e.summary     = text
       end
     end
+    cal.publish
 
-    render plain: cal.to_ical
+    send_data cal.to_ical, type: 'text/calendar', disposition: 'attachment', filename: "weeia_calendar-#{month}-2019.ics"
   end
 end
