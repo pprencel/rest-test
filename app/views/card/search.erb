@@ -1,0 +1,13 @@
+
+<% if @resp.present? %>
+  <p> Znaleziono <%= @resp.count %> kontatów</p>
+
+  <% @resp.each do |c| %>
+    <div>
+      <%= link_to("Generuj vCard dla #{c[:name]}", download_vcard_path(c.id, :format => 'vcard')) %>
+    </div>
+  <% end %>
+
+<% else %>
+   <p> Nie znalziono uzytkowników dla zadanej frazy wyszukania </p>
+<% end %>

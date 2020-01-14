@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:2.1
+N:<%=I18n.transliterate(@contact.name.split(" ").last)%>;<%=I18n.transliterate(@contact.name.split(" ").first)%>
+ORG:Politechnika Lodzka
+TITLE:<%= I18n.transliterate(@contact.title) %>
+ADR;WORK;PREF: <%= I18n.transliterate(@contact.location) %>
+TEL;CELL: <%= @contact.phone %>
+EMAIL;INTERNET: <%= @contact.email %>
+REV:20080424T195243Z
+END:VCARD
